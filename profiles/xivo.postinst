@@ -27,6 +27,7 @@ sed -i '2 a\127.0.0.1\twazo' /etc/hosts
 
 cat > /etc/rc.xivo << EOF
 #!/bin/sh
+/usr/sbin/dpkg-reconfigure wazo-webhookd
 /usr/sbin/dpkg-reconfigure xivo-manage-db
 /usr/sbin/dpkg-reconfigure xivo-dird
 /usr/sbin/dpkg-reconfigure xivo-auth
