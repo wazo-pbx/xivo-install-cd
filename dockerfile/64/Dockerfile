@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 
 MAINTAINER Wazo Maintainers <dev.wazo@gmail.com>
 

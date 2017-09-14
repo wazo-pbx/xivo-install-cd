@@ -1,4 +1,4 @@
-FROM 32bit/debian:jessie
+FROM i386/debian:stretch
 
 MAINTAINER  Wazo Maintainers <dev.wazo@gmail.com>
 
