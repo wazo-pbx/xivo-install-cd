@@ -13,6 +13,7 @@ RUN apt-get -yqq install simple-cdd \
                     sudo \
                     mtools \
                     dosfstools \
+                    python \
                     debian-archive-keyring
 
 RUN groupadd builder
