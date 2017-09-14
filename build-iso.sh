@@ -6,7 +6,7 @@ sudo apt-get update
 build_dir=$(pwd)
 image_dir="$build_dir/images"
 packages_dir="/tmp/xivo_packages"
-mirror="http://http.us.debian.org/debian"
+mirror="http://http.us.debian.org/debian/"
 arch=$(dpkg-architecture -qDEB_HOST_ARCH)
 version="wazo-$(apt-cache policy xivo | grep Candidate | grep -oE '[0-9]{2}\.[0-9]+(\.[0-9]+)?' | head -n1)"
 

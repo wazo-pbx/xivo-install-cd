@@ -4,7 +4,7 @@ grub-pc
 grub-efi
 
 popularity-contest
-console-tools
+kbd
 console-setup
 
 usbutils
