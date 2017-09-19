@@ -23,8 +23,8 @@ build_iso () {
 }
 
 rename_iso () {
-    local version="$(basename /tmp/xivo_packages/xivo-base* | awk -F'[_~]' '{ print $2 }')"
     local arch=$(dpkg-architecture -qDEB_HOST_ARCH)
+    local version="$(basename $packages_dir/xivo-base_* | awk -F'[_~]' '{ print $2 }')"
     cd $image_dir
     mv debian-*.iso wazo-$version-$arch.iso
     md5sum wazo-$version-$arch.iso > wazo-$version-$arch.iso.md5sum
