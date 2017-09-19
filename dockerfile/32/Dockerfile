@@ -11,11 +11,8 @@ RUN apt-get -yqq install simple-cdd \
                     sudo \
                     mtools \
                     dosfstools \
-                    gnupg \
                     python \
                     debian-archive-keyring
-
-RUN apt-key adv --recv-keys --keyserver pgp.mit.edu 0x3F1BF7FC527FBC6A
 
 RUN groupadd builder
 RUN useradd -r -g builder -G sudo -s /bin/bash -u 1000 builder

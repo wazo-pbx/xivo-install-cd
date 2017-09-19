@@ -1,8 +1,6 @@
 #!/bin/bash
 set -x
 
-sudo apt-get update
-
 build_dir=$(pwd)
 image_dir="$build_dir/images"
 packages_dir="/tmp/xivo_packages"
