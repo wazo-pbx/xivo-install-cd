@@ -1,6 +1,6 @@
 FROM debian:stretch
 
-MAINTAINER Wazo Maintainers <dev.wazo@gmail.com>
+MAINTAINER Wazo Maintainers <dev@wazo.community>
 
 ENV DEBIAN_FRONTEND noninteractive
 
