@@ -7,7 +7,6 @@ build_dir=$(pwd)
 image_dir="$build_dir/images"
 packages_dir="/tmp/xivo_packages"
 mirror="http://http.us.debian.org/debian/"
-arch=$(dpkg-architecture -qDEB_HOST_ARCH)
 
 cleanup () {
     rm -rf $build_dir/tmp/{cd-build,debian-cd,debootstrap,extra}
@@ -24,11 +23,11 @@ build_iso () {
 }
 
 rename_iso () {
-    local version="wazo-$(basename /tmp/xivo_packages/xivo-base* | awk -F'[_~]' '{ print $2 }')"
+    local version="$(basename /tmp/xivo_packages/xivo-base* | awk -F'[_~]' '{ print $2 }')"
+    local arch=$(dpkg-architecture -qDEB_HOST_ARCH)
     cd $image_dir
-    iso=$version-$arch.iso
-    mv debian-*.iso $iso
-    md5sum $iso > $iso.md5sum
+    mv debian-*.iso wazo-$version-$arch.iso
+    md5sum wazo-$version-$arch.iso > wazo-$version-$arch.iso.md5sum
 }
 
 cleanup
