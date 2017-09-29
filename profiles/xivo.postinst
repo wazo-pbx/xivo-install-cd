@@ -31,10 +31,10 @@ cat > /etc/rc.xivo << EOF
 /usr/sbin/dpkg-reconfigure wazo-webhookd
 /usr/sbin/dpkg-reconfigure xivo-manage-db
 /usr/sbin/dpkg-reconfigure xivo-dird
-/usr/sbin/dpkg-reconfigure xivo-auth
+/usr/sbin/dpkg-reconfigure wazo-auth
 
 # Restart services in order to use the new XIVO_UUID set up by xivo-manage-db
-/bin/systemctl restart xivo-auth.service
+/bin/systemctl restart wazo-auth.service
 /bin/systemctl restart xivo-confd.service
 /bin/systemctl restart xivo-dird.service
 EOF
