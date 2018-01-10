@@ -41,7 +41,12 @@ EOF
 chmod +x /etc/rc.xivo
 
 # reconfigure xivo-manage-db when postgres is running
-sed -i '13 i\/etc/rc.xivo && rm -f /etc/rc.xivo && sed -i "/rc.xivo/d" /etc/rc.local' /etc/rc.local
+cat > /etc/rc.local << EOF
+#!/bin/sh
+/etc/rc.xivo && rm -f /etc/rc.xivo && sed -i "/rc.xivo/d" /etc/rc.local
+exit 0
+EOF
+chmod a+x /etc/rc.local
 
 rm /etc/apt/apt.conf.d/91tmp
 

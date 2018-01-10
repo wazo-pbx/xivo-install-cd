@@ -4,5 +4,7 @@ debconf-utils
 hwinfo
 openssh-server
 locales-all
-postgresql-plpython-9.4
 dnsutils
+python-cffi-backend
+python3-cffi-backend
+perl-openssl-defaults

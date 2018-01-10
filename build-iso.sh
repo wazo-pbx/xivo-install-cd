@@ -14,7 +14,7 @@ cleanup () {
 build_iso () {
     cd $build_dir
     ./get-xivo-packages.py $packages_dir -V rc
-    simple-cdd --dist jessie --profiles-udeb-dist jessie --conf ./xivo.conf --debian-mirror $mirror --debug
+    simple-cdd --dist stretch --profiles-udeb-dist stretch --conf ./xivo.conf --debian-mirror $mirror --debug
     if [ $? -ne 0 ] ; then
         exit 1
     fi

@@ -4,7 +4,6 @@ grub-pc
 grub-efi
 
 popularity-contest
-kbd
 console-setup
 
 usbutils
@@ -33,3 +32,6 @@ syslinux-common
 syslinux
 # newer debian-cd (3.1.5+) requires isolinux
 isolinux
+
+# necessary if user chooses to not set a root password.
+sudo

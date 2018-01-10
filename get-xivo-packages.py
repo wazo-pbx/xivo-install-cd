@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2010-2016 The Wazo Authors  (see the AUTHORS file)
+# Copyright 2010-2018 The Wazo Authors  (see the AUTHORS file)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -96,7 +96,7 @@ class GetWazoPackages(object):
         if self.options.version == 'current':
             self.release = 'debian'
             self.SUITES = [
-                'wazo-dev/main/binary-%s/Packages' % architecture,
+                'wazo-dev-stretch/main/binary-%s/Packages' % architecture,
             ]
         elif self.options.version == 'rc':
             self.release = 'debian'
