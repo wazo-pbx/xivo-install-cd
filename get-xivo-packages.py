@@ -101,7 +101,7 @@ class GetWazoPackages(object):
         elif self.options.version == 'rc':
             self.release = 'debian'
             self.SUITES = [
-                'wazo-rc/main/binary-%s/Packages' % architecture,
+                'wazo-rc-stretch/main/binary-%s/Packages' % architecture,
             ]
         else:
             self.release = 'archive'
