@@ -27,6 +27,10 @@ sed -i '2 a\127.0.0.1\twazo' /etc/hosts
 
 cat > /etc/rc.xivo << EOF
 #!/bin/sh
+debconf-set-selections <<EOF_DEBCONF
+wazo-auth wazo-auth/db-skip boolean false
+EOF_DEBCONF
+
 /usr/sbin/dpkg-reconfigure mongooseim
 /usr/sbin/dpkg-reconfigure wazo-webhookd
 /usr/sbin/dpkg-reconfigure xivo-manage-db

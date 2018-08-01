@@ -103,3 +103,7 @@ d-i preseed/early_command string anna-install simple-cdd-profiles
 console-common console-data/keymap/policy select Don't touch keymap
 console-data console-data/keymap/policy select Don't touch keymap
 
+
+# wazo-auth
+# disable db configuration at first, because postgresql is not running yet
+wazo-auth wazo-auth/db-skip boolean true
