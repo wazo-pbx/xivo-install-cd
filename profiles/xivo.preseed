@@ -104,6 +104,6 @@ console-common console-data/keymap/policy select Don't touch keymap
 console-data console-data/keymap/policy select Don't touch keymap
 
 
-# wazo-auth
 # disable db configuration at first, because postgresql is not running yet
 wazo-auth wazo-auth/db-skip boolean true
+xivo-manage-db xivo-manage-db/db-skip boolean true

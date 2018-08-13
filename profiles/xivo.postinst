@@ -29,6 +29,7 @@ cat > /etc/rc.xivo << EOF
 #!/bin/sh
 debconf-set-selections <<EOF_DEBCONF
 wazo-auth wazo-auth/db-skip boolean false
+xivo-manage-db xivo-manage-db/db-skip boolean false
 EOF_DEBCONF
 
 /usr/sbin/dpkg-reconfigure mongooseim --frontend noninteractive
