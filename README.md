@@ -1,6 +1,11 @@
 Wazo install CD
 ===============
 
+This repo is deprecated
+-----------------------
+
+The procedure described here was valid until Wazo 18.03. This repo is only kept to rebuild any old ISO if necessary.
+
 Requirements
 ------------
 
